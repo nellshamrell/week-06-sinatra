@@ -38,11 +38,7 @@ describe "Twitter Info" do
 
     last_response.body.should match(/Append a twitter username on the url to display how many followers the user has/)
     last_response.status.should == 200
-
-
   end
-
-
 
   ##
   # this spec is a placeholder a feature that needs to be written.
@@ -55,7 +51,13 @@ describe "Twitter Info" do
   #
   # when that happens, return a new template file named 404.haml
   #
-  it "should return a custom 404 page when the username cannot be found"
+  it "should return a custom 404 page when the username cannot be found" do
+   # post "/user/sasdfadskfasdfhasdf"
+    get "/user/alaksdjflkajsdfasdf"
+    last_response.status.should == 404
+    last_response.body.should match(/Whoops, that user does not exist!/)
+
+  end
 
 
 end
