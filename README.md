@@ -1,3 +1,5 @@
+My site is at http://deep-robot-2878.heroku.com/
+
 # Week 6 Sinatra Heroku Example
 
 ## Outline
