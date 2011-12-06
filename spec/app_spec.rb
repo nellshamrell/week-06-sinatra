@@ -33,7 +33,14 @@ describe "Twitter Info" do
   ##
   # this spec needs to be written.
   #
-  it "should display the user's follower count for any valid username"
+  it "should display the user's follower count for any valid username" do
+    get "/"
+
+    last_response.body.should match(/Append a twitter username on the url to display how many followers the user has/)
+    last_response.status.should == 200
+
+
+  end
 
 
 
